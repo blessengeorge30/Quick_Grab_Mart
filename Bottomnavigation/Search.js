@@ -13,6 +13,7 @@ import {
 import { PRODUCT_HOME } from "../Components/DiscoverFood";
 import { LUNCH_ITEMS } from "../Components/Lunches";
 import { PRODUCT_CARD } from "../Components/Recomended";
+import Icon from 'react-native-ico-material-design';
 
 
 
@@ -31,51 +32,29 @@ const Homescreen = () => {
             </View>
         )
     }
-    const renderitems = (item) => {
-
-        return (
-            <View style={styles.discoverLunches}>
-                <ImageBackground
-                    resizeMode='cover'
-                    style={styles.backgroundImage1}
-                    source={item.ImageBackground}
-                />
-                <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, borderRadius: 30, overflow: 'hidden' }}>
-                    <Text style={{ fontSize: 30, fontWeight: 'bold', color: 'white', marginTop: 12, marginHorizontal: 15 }}>{item.name}</Text>
-                    <Text style={{ fontSize: 28, fontWeight: 'bold', color: 'white', marginVertical: 0.5, marginHorizontal: 15 }}>{item.name1}</Text>
-                    <Image style={{ height: 16, width: 100, marginHorizontal: 15, tintColor: '#FFD700', }} source={item.Image} />
-                    <Text style={{ fontSize: 10, fontWeight: 'bold', color: 'grey', marginTop: 2, marginHorizontal: 18 }}>{item.rating}</Text>
-
-                    <View style={{ flexDirection: 'row' }}>
-                        <TouchableOpacity style={styles.buttonView1} >
-                            <Text style={styles.buttontext1}> Add to Cart </Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.button3}  >
-                            <Image source={require('../assets/heart.png')} style={{ height: 25, width: 25, tintColor: 'red' }} />
-                        </TouchableOpacity>
-                    </View>
-
-
-                </View>
-            </View>
-        )
-    }
+    
     const renderitem1 = (item) => {
 
         return (
             <View style={styles.discovercards}>
-                <View >
-                    <Text style={{ marginLeft: 12, marginTop: 18, fontSize: 20, fontWeight: 'bold', color: 'grey' }}>{item.name}</Text>
-                    <Image style={{ height: 40, width: 40, marginLeft: 39, marginTop: 15, alignSelf: "flex-end" }} source={item.image} />
+              
+                <View style={{ position: 'absolute', borderRadius: 30, overflow: 'hidden' }}>
+                    <Text style={{ marginLeft: 12, marginTop: 18, fontSize: 20, fontWeight: 'bold', color: 'white' }}>{item.name}</Text>
+                    
+                   
+                 
 
                 </View>
-                <View style={{ flexDirection: 'row' }}>
-                    <Text style={{ marginLeft: 22, marginTop: 15, fontSize: 20, fontWeight: 'bold', color: 'white' }}>{item.price}</Text>
+                <View style={{ marginVertical:45,flexDirection: 'row' }}>
+                <Text style={{ marginLeft: 12, marginTop: 25, fontSize: 20, fontWeight: 'bold', color: 'white' }}>{item.price}</Text>
+                    <Image style={{ height: 50, width: 85, marginHorizontal: 30,marginVertical:15 }} source={item.Image} />
+    
+                
 
-                    <Text style={{ marginLeft: 45, marginTop: 15, fontSize: 16, fontWeight: 'bold', color: 'grey' }}>{item.price2}</Text>
+                    
 
                 </View>
-                <Text style={{ marginLeft: 25, marginTop: 1, fontSize: 16, fontWeight: 'bold', color: 'grey' }}>{item.price1}</Text>
+              
 
             </View>
         )
@@ -86,7 +65,7 @@ const Homescreen = () => {
 
     return (
         <ScrollView style={styles.container}>
-            <ImageBackground source={require('../assets/bg.jpg')}>
+            <ImageBackground source={require('../assets/background1.jpg')}>
                 <View style={{ marginTop: 10, marginBottom: 20 }}>
 
                     <View style={{ marginTop: 20, marginLeft: 28, flexDirection: 'row' }}>
@@ -121,7 +100,7 @@ const Homescreen = () => {
             <View style={{ height: 900, backgroundColor: 'white', borderRadius: 25 }}>
                 <View style={{ flexDirection: "row" }}>
                     <View>
-                        <Text style={{ color: 'black', fontSize: 32, fontWeight: 'bold', marginHorizontal: 25, marginTop: 30 }}> Welcome!</Text>
+                        <Text style={{ color: 'black', fontSize: 32, fontWeight: 'bold', marginHorizontal: 25, marginTop: 30 }}> Fresh Food !</Text>
                         <Text style={{ color: '#333333', fontSize: 18, marginHorizontal: 25, marginVertical: 0 }}> how can we help you today?</Text>
                     </View>
                     <TouchableOpacity style={styles.button2}  >
@@ -133,13 +112,14 @@ const Homescreen = () => {
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{ color: 'black', fontSize: 22, fontWeight: 'bold', marginHorizontal: 25, marginTop: 25 }}> Top Categories</Text>
                         <TouchableOpacity style={{ flexDirection: 'row' }}>
-                            <Text style={{ color: '#333333', fontSize: 15, marginLeft: 145, marginTop: 35 }}>View all  </Text>
-                            <Image source={require('../assets/rightarrow.png')} style={{ height: 15, width: 15, tintColor: 'black', marginTop: 35, marginLeft: 5 }} />
+                        
+                            <Text style={{ color: '#333333', fontSize: 15, marginLeft: 105, marginTop: 35 }}>View all  </Text>
+                            <Image source={require('../assets/rightarrow.png')} style={{ height: 15, width: 15, tintColor: 'black', marginTop: 38, marginLeft: 5 }} />
                         </TouchableOpacity>
 
                     </View>
 
-                    <View style={{ marginVertical: 10 }}>
+                    <View style={{ marginVertical: 10,marginLeft:8 }}>
                         <ScrollView horizontal={true}>
                             {
                                 PRODUCT_HOME?.map((item) => {
@@ -149,22 +129,13 @@ const Homescreen = () => {
                         </ScrollView>
                     </View>
 
-                    <View >
-                        <Text style={{ color: 'black', fontSize: 22, fontWeight: 'bold', marginHorizontal: 25, marginVertical: 15 }}> Popular Lunches</Text>
-                        <ScrollView horizontal={true}>
-                            {
-                                LUNCH_ITEMS?.map((item) => {
-                                    return renderitems(item);
-                                })
-                            }
-                        </ScrollView>
-                    </View>
+                    
                     <View >
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ color: 'black', fontSize: 22, fontWeight: 'bold', marginHorizontal: 25, marginTop: 25 ,marginBottom:20}}> Recommended for you</Text>
                             <TouchableOpacity style={{ flexDirection: 'row' }}>
-                                <Text style={{ color: '#333333', fontSize: 15, marginLeft: 85, marginTop: 35 }}>View all  </Text>
-                                <Image source={require('../assets/rightarrow.png')} style={{ height: 15, width: 15, tintColor: 'black', marginTop: 35, marginLeft: 5 }} />
+                                <Text style={{ color: '#333333', fontSize: 15, marginLeft: 40, marginTop: 35 }}>View all  </Text>
+                                <Image source={require('../assets/rightarrow.png')} style={{ height: 15, width: 15, tintColor: 'black', marginTop: 38, marginLeft: 5 }} />
                             </TouchableOpacity>
 
                         </View>
@@ -184,7 +155,7 @@ const styles = StyleSheet.create({
     container: {
         height: 100,
         backgroundColor: 'black',
-        flex: 1
+        flex: 2
     },
     logo: {
         height: 125,
@@ -242,7 +213,7 @@ const styles = StyleSheet.create({
         borderRadius: 16,
         justifyContent: 'center',
         alignItems: 'center',
-        marginHorizontal: 128
+        marginHorizontal: 90
 
 
 
@@ -259,7 +230,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         borderRadius: 100,
         justifyContent: 'center',
-        marginHorizontal: 85,
+        marginHorizontal: 55,
         marginTop: 32,
 
     },
@@ -276,14 +247,14 @@ const styles = StyleSheet.create({
         borderRadius: 100,
         justifyContent: 'center',
         marginHorizontal: 25,
-        marginTop: 118,
+        marginTop: 105,
 
     },
     buttonView1: {
         width: '65%',
         height: 45,
         backgroundColor: 'white',
-        marginTop: 125,
+        marginTop: 110,
         borderRadius: 45,
         marginLeft: 10,
         alignItems: 'center',
@@ -339,7 +310,7 @@ const styles = StyleSheet.create({
         marginVertical:15,
         // alignItems: "center",
         // justifyContent: 'center',
-        backgroundColor: '#242424'
+        backgroundColor: '#333333'
     },
 
 

@@ -10,7 +10,7 @@ import {
     ImageBackground
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import Homescreen from "./Homescreen";
+import Homescreen from "./Router";
 
 
 
@@ -18,7 +18,7 @@ import Homescreen from "./Homescreen";
 const Profile = () => {
     const navigation = useNavigation();
     const Homescreen = () => {
-        navigation.navigate("Homescreen")
+        navigation.navigate("Router")
     }
 
     return (
@@ -31,15 +31,15 @@ const Profile = () => {
 
                 <View style={{ marginTop: 400, alignItems: 'center', alignSelf: 'center' }}>
                     <View style={{ flexDirection: "row" }}>
-                        <Text style={{ color: 'white', fontSize: 25, marginHorizontal: 10, marginBottom: 5 }}>FOOD </Text>
-                        <Text style={{ color: 'white', fontSize: 25, marginLeft: 20, marginBottom: 5 }}>INSTAMART </Text>
-                        <Text style={{ color: 'white', fontSize: 25, marginLeft: 20, marginBottom: 5 }}>DINE IN </Text>
+                        <Text style={{ color: 'white', fontSize: 20, marginHorizontal: 10, marginBottom: 5 }}>FOOD </Text>
+                        <Text style={{ color: 'white', fontSize: 20, marginLeft: 20, marginBottom: 5 }}>INSTAMART </Text>
+                        <Text style={{ color: 'white', fontSize: 20, marginLeft: 20, marginBottom: 5 }}>DINE IN </Text>
 
                     </View>
 
                     <View style={{ borderTopWidth: 2, borderColor: 'grey' }}>
 
-                        <Text style={{ color: 'white', fontSize: 30, alignSelf: 'center', fontWeight: "bold" }}>Order from Top Restaurants</Text>
+                        <Text style={{ color: 'white', fontSize: 25, alignSelf: 'center', fontWeight: "bold" }}>Order from Top Restaurants</Text>
 
                     </View>
                 </View>

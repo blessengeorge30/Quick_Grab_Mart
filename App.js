@@ -2,8 +2,12 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import Homescreen from './screens/Homescreen';
+import Router from './screens/Router';
 import Getstarted from './screens/Getstarted';
+import Homescreen from "./Bottomnavigation/Homescreen";
+
+
+
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -16,10 +20,17 @@ const App = () => {
           options={{ headerShown: false }}
         /> 
            <Stack.Screen
+          name="Router"
+          component={Router}
+          options={{ headerShown: false }}
+        /> 
+            <Stack.Screen
           name="Homescreen"
           component={Homescreen}
           options={{ headerShown: false }}
         /> 
+            
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
