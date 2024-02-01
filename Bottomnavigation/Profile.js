@@ -42,7 +42,7 @@ const Profile = () => {
                     <View style={{ flexDirection: 'row', marginTop: 4 }}>
                         <Text style={{ fontSize: 30, fontWeight: 'bold', color: 'white',marginLeft:160,marginRight:75 }}>Profile</Text>
                         <TouchableOpacity >
-                            <Image source={require('../assets/bell.png')} style={{ height: 25, width: 25 ,marginRight:14,tintColor:'black'}} />
+                            <Image source={require('../assets/bell.png')} style={{ height: 25, width: 25 ,marginRight:-4,tintColor:'black'}} />
 
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.button1}>

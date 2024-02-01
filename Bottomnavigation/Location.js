@@ -75,12 +75,12 @@ const Homescreen = () => {
                
                     <View style={{ flexDirection: 'row' }}>
                     <TouchableOpacity style={styles.button2}  >
-                        <Image source={require('../assets/bestlin1.png')} style={{ height: 55, width: 55 }} />
+                        <Image source={require('../assets/delivery.jpeg')} style={{ height: 60, width: 60 ,borderRadius:50}} />
                     </TouchableOpacity>
                  
                     <View>
-                        <Text style={{ color: 'black', fontSize: 20, fontWeight: 'bold', marginHorizontal: 5, marginTop: 30 }}> Edward Thomas</Text>
-                        <Text style={{ color: '#333333', fontSize: 16, marginHorizontal: 5, marginVertical: 0 }}> Delivery Partner</Text>
+                        <Text style={{ color: 'black', fontSize: 20, fontWeight: 'bold', marginRight: 5,marginLeft:-3, marginTop: 30 }}> Edward Thomas</Text>
+                        <Text style={{ color: '#333333', fontSize: 16, marginRight: 5, marginVertical: 0 }}> Delivery Partner</Text>
                     </View>
 
                     <View>
@@ -173,8 +173,8 @@ const styles = StyleSheet.create({
 
     },
     button2: {
-        height: 59,
-        width: 59,
+        height: 65,
+        width: 65,
         borderColor: 'red',
         borderStyle: 'dotted',
         elevation: 35,
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginHorizontal: 15,
         marginLeft:25,
-        marginTop: 32,
+        marginTop: 25,
 
     },
     button3: {
