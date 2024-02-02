@@ -7,7 +7,7 @@ An application that connects users with nearby restaurants, allowing them to bro
 
 ## Overview
 
-![App Screenshot](./screenshots/QUICKMART.png)
+![App Screenshot](./screenshots/login.png)
 ## 🔗 Links
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/blessen-george-9360a9220/)
