@@ -49,7 +49,7 @@ const Homescreen = () => {
 
                     <View style={{ flexDirection: 'row' }}>
                         <TouchableOpacity style={styles.buttonView1} >
-                            <Text style={styles.buttontext1}> Add to Cart y</Text>
+                            <Text style={styles.buttontext1}> Add to Cart </Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.button3}  >
                             <Image source={require('../assets/heart.png')} style={{ height: 25, width: 25, tintColor: 'red' }} />
